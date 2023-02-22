@@ -45,3 +45,12 @@ contador = 0
 while contador <= 50:
     shutil.copy2("archivo.py", f"script-gusano{str(contador)}.py")
     contador += 1
+
+# Automatizar eliminacion de archivos que cumplan u patron:
+# for archivo in os.listdir():
+#     if archivo.startswith("script-gusano") == True:
+#         os.remove(archivo)
+
+for archivo in os.listdir():
+    if archivo.startswith("script-gusano"):
+        os.remove(archivo)
