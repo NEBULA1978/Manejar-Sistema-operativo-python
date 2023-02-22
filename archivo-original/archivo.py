@@ -41,7 +41,3 @@ os.system("touch pruebayeaa")
 # Levantar un servidor con python con el puerto 5000
 os.system("python3 -m http.server 5000")
 
-# Vemos la ip con ifconfig
-# 192.168.15.114
-# Escribimos en navegador
-# http://192.168.15.114:5000/
