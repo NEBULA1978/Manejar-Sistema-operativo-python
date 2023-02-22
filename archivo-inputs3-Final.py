@@ -25,11 +25,15 @@ for archivo in os.listdir():
     print(archivo)
 
 # Pedir el nombre del archivo a copiar
-archivo_original = input("Ingrese el nombre del archivo que desea copiar: ")
-archivo_copia = input("Ingrese el nombre que desea para la copia del archivo: ")
+archivo_original = input("Ingrese el nombre del archivo que desea copiar (presione Enter para omitir): ")
+if archivo_original != "":
+    archivo_copia = input("Ingrese el nombre que desea para la copia del archivo: ")
+    # SHUTIL (copiar y pegar archivos)
+    shutil.copy2(archivo_original, archivo_copia) 
+    print("Archivo copiado exitosamente.")
+else:
+    print("Se ha omitido la copia del archivo.")
 
-# SHUTIL (copiar y pegar archivos)
-shutil.copy2(archivo_original, archivo_copia) 
-print("Archivo copiado exitosamente.")
+# En este código, se verifica si el usuario ingresó un nombre de archivo antes de pedir el nombre de la copia y realizar la copia. Si el usuario omite el nombre del archivo original, se mostrará un mensaje correspondiente y se omitirá la copia.
 
-# En este código, primero se verifica si se ingresó un nombre de carpeta antes de verificar si la carpeta ya existe o crearla si no existe. Si la entrada del usuario está vacía, se omite la creación de la carpeta y se muestra un mensaje correspondiente.
+# ¡Espero que esto te haya ayudado! Avísame si tienes alguna otra pregunta o necesitas más ayuda.
